@@ -67,7 +67,7 @@ const handleSubmit=async()=>{
   
   if(pic){
     try{
-      const response=await fetch("http://localhost:5000/api/user/profilepic",{
+      const response=await fetch("https://chat-deploy-t6or.onrender.com/api/user/profilepic",{
         method:"POST",
         headers:{
             "Authorization":`Bearer ${user.token}`,

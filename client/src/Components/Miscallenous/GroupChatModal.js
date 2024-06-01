@@ -25,7 +25,7 @@ export const GroupChatModal = ({children}) => {
         try{
             console.log(search)
             setLoading(true)
-            const response=await fetch(`http://localhost:5000/api/user/getuser?search=${search}`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/user/getuser?search=${search}`,{
                 method:"GET",
                 headers:{
                     "Authorization":`Bearer ${user.token}`
@@ -54,7 +54,7 @@ export const GroupChatModal = ({children}) => {
         }
 
         try{
-            const response=await fetch(`http://localhost:5000/api/chat/group`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat/group`,{
                 method:"POST",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,

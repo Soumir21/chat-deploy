@@ -49,7 +49,7 @@ export const SideDrawer = ({fetchAgain,setFetchAgain}) => {
             try{
                 console.log(search)
                 setLoading(true)
-                const response=await fetch(`http://localhost:5000/api/user/getuser?search=${search}`,{
+                const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/user/getuser?search=${search}`,{
                     method:"GET",
                     headers:{
                         "Authorization":`Bearer ${user.token}`
@@ -69,7 +69,7 @@ export const SideDrawer = ({fetchAgain,setFetchAgain}) => {
     const accessChat=async(userId)=>{
         try{
             setLoadingChat(true);
-            const response=await fetch(`http://localhost:5000/api/chat`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat`,{
                     method:"POST",
                     headers:{
                         "Authorization":`Bearer ${user.token}`,

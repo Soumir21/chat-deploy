@@ -21,7 +21,7 @@ export const ScrollableChat = ({messages,fetchMessagesAgain,setFetchMessagesAgai
  
     const handleDelete=async()=>{
         try{
-            const res=await fetch(`http://localhost:5000/api/message/delete`,{
+            const res=await fetch(`https://chat-deploy-t6or.onrender.com/api/message/delete`,{
                 method:"POST",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,

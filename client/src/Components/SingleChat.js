@@ -11,7 +11,8 @@ import { themes} from './Miscallenous/ChatThemes';
 import { ScrollableChat } from './ScrollableChat'
 import Lottie from "react-lottie"
 import animationData from "../Animations/typing.json"
-const ENDPOINT="http://localhost:5000"
+const ENDPOINT="https://chat-deploy-t6or.onrender.com"
+//doubt here
 var socket,selectedChatCompare;
 
 
@@ -37,7 +38,7 @@ export const SingleChat = ({setFetchAgain,fetchAgain}) => {
         if(!selectedChat) return
         try{
             setLoading(true)
-            const response=await fetch(`http://localhost:5000/api/message/${selectedChat._id}`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/message/${selectedChat._id}`,{
                     method:"GET",
                     headers:{
                         "Authorization":`Bearer ${user.token}`,
@@ -62,7 +63,7 @@ export const SingleChat = ({setFetchAgain,fetchAgain}) => {
             socket.emit("stop typping",selectedChat._id)
             try{
                 setNewMessage("");
-                const response=await fetch("http://localhost:5000/api/message",{
+                const response=await fetch("https://chat-deploy-t6or.onrender.com/api/message",{
                     method:"POST",
                     headers:{
                         "Authorization":`Bearer ${user.token}`,

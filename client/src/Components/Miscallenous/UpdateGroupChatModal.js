@@ -19,7 +19,7 @@ export const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) =
         if(!groupChatName) return
         try{
             setRenameLoading(true);
-            const response=await fetch(`http://localhost:5000/api/chat/renamegroup`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat/renamegroup`,{
                 method:"PUT",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,
@@ -60,7 +60,7 @@ export const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) =
 
         try{
             setLoading(true)
-            const response=await fetch(`http://localhost:5000/api/user/getuser?search=${search}`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/user/getuser?search=${search}`,{
                 method:"GET",
                 headers:{
                     "Authorization":`Bearer ${user.token}`
@@ -90,7 +90,7 @@ export const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) =
 
         try{
             setLoading(true);
-            const response=await fetch(`http://localhost:5000/api/chat/groupremove`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat/groupremove`,{
                 method:"PUT",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,
@@ -139,7 +139,7 @@ export const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) =
 
         try{
             setLoading(true);
-            const response=await fetch(`http://localhost:5000/api/chat/groupaddto`,{
+            const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat/groupaddto`,{
                 method:"PUT",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,

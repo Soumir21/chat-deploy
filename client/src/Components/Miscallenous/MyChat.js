@@ -12,7 +12,7 @@ export const MyChat = ({fetchAgain}) => {
   const {user,setUser,selectedChat,setSelectedChat,chat,setChat,notification,setNotification}=ChatState()
   const fethChat=async()=>{
     try{
-        const response=await fetch(`http://localhost:5000/api/chat`,{
+        const response=await fetch(`https://chat-deploy-t6or.onrender.com/api/chat`,{
                 method:"GET",
                 headers:{
                     "Authorization":`Bearer ${user.token}`,
